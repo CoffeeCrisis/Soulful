@@ -593,61 +593,61 @@ while running:
         if n > 1:
             pygame.draw.rect(screen, (0, 0, 0), ((0, 700), (800, 100)))
             if event.type == pygame.KEYDOWN and level == 8:
-            k = 0
-            for elem in all_sprites:
-                if k == 2:
-                    if 307 <= elem.rect.x <= 461 and 291 <= elem.rect.y <= 446:
-                        n = 0
-                        if len(been) == 2:
-                            text1, pos1, text2, pos2, text3, pos3, level, fps = passage_six()
-                        else:
-                            text1, pos1, text2, pos2, text3, pos3, level, fps = town()
-                k += 1
-            k = 0
-            if event.key == pygame.K_UP:
-                for sprite in all_sprites:
+                k = 0
+                for elem in all_sprites:
                     if k == 2:
-                        sprite.rect.y -= 10
-                        z = 0
-                        for elem in all_sprites:
-                            if z == 1:
-                                if pygame.sprite.collide_mask(sprite, elem):
-                                    sprite.rect.y += 10
-                            z += 1
+                        if 307 <= elem.rect.x <= 461 and 291 <= elem.rect.y <= 446:
+                            n = 0
+                            if len(been) == 2:
+                                text1, pos1, text2, pos2, text3, pos3, level, fps = passage_six()
+                            else:
+                                text1, pos1, text2, pos2, text3, pos3, level, fps = town()
                     k += 1
-            if event.key == pygame.K_DOWN:
-                for sprite in all_sprites:
-                    if k == 2:
-                        sprite.rect.y += 10
-                        z = 0
-                        for elem in all_sprites:
-                            if z == 1:
-                                if pygame.sprite.collide_mask(sprite, elem):
-                                    sprite.rect.y -= 10
-                            z += 1
-                    k += 1
-            if event.key == pygame.K_RIGHT:
-                for sprite in all_sprites:
-                    if k == 2:
-                        sprite.rect.x += 10
-                        z = 0
-                        for elem in all_sprites:
-                            if z == 1:
-                                if pygame.sprite.collide_mask(sprite, elem):
-                                    sprite.rect.x -= 10
-                            z += 1
-                    k += 1
-            if event.key == pygame.K_LEFT:
-                for sprite in all_sprites:
-                    if k == 2:
-                        sprite.rect.x -= 10
-                        z = 0
-                        for elem in all_sprites:
-                            if z == 1:
-                                if pygame.sprite.collide_mask(sprite, elem):
-                                    sprite.rect.x += 10
-                            z += 1
-                    k += 1
+                k = 0
+                if event.key == pygame.K_UP:
+                    for sprite in all_sprites:
+                        if k == 2:
+                            sprite.rect.y -= 10
+                            z = 0
+                            for elem in all_sprites:
+                                if z == 1:
+                                    if pygame.sprite.collide_mask(sprite, elem):
+                                        sprite.rect.y += 10
+                                z += 1
+                        k += 1
+                if event.key == pygame.K_DOWN:
+                    for sprite in all_sprites:
+                        if k == 2:
+                            sprite.rect.y += 10
+                            z = 0
+                            for elem in all_sprites:
+                                if z == 1:
+                                    if pygame.sprite.collide_mask(sprite, elem):
+                                        sprite.rect.y -= 10
+                                z += 1
+                        k += 1
+                if event.key == pygame.K_RIGHT:
+                    for sprite in all_sprites:
+                        if k == 2:
+                            sprite.rect.x += 10
+                            z = 0
+                            for elem in all_sprites:
+                                if z == 1:
+                                    if pygame.sprite.collide_mask(sprite, elem):
+                                        sprite.rect.x -= 10
+                                z += 1
+                        k += 1
+                if event.key == pygame.K_LEFT:
+                    for sprite in all_sprites:
+                        if k == 2:
+                            sprite.rect.x -= 10
+                            z = 0
+                            for elem in all_sprites:
+                                if z == 1:
+                                    if pygame.sprite.collide_mask(sprite, elem):
+                                        sprite.rect.x += 10
+                                z += 1
+                        k += 1
         n += 1
     if level == 9:
         if n == 1:
